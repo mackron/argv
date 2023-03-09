@@ -189,7 +189,7 @@ ARGV_API const char* argv_get(int argc, const char** argv, const char* key)
 
 static int argv_is_whitespace_ascii(char cp)
 {
-    switch (cp) {
+    switch ((unsigned int)cp) {
         case 0x09:
         case 0x0A:
         case 0x0B:
